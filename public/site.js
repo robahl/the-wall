@@ -1,6 +1,6 @@
 var messageDiv = document.getElementById('message');
 
-var socket = io.connect(location.origin);
+var socket = io.connect(location.origin, {timeout: 5000});
 socket.on('server-message', function (data) {
   messageDiv.innerHTML = data.message;
 });
