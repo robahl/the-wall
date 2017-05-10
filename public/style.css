@@ -1,4 +1,11 @@
+html, body {
+  height: 100%;
+}
+
 body {
+  font: 16px 'Comfortaa', cursive;
+  margin: 0;
+  color: rgb(251, 243, 36);
 }
 
 #page {
@@ -12,5 +19,13 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);;
+  transform: translateY(-50%) translateX(-50%);
+  max-width: 95%;
+  outline: none;
+  font-size: 5em;
 }
+
+/*#message[contenteditable="true"]:focus {
+  border: 1px solid rgb(175, 175, 175);
+  padding: 0.3em;
+}*/
