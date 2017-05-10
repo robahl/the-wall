@@ -6,6 +6,14 @@ const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 3030;
 
+app.enable('trust proxy');
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(require('morgan')('combined'));
+}
+
+// END SETUP
+
 let wallMessage = 'The Wall'
 
 app.use(bodyParser.json());
