@@ -4,12 +4,14 @@ const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const bodyParser = require('body-parser');
 
+const port = process.env.PORT || 3030;
+
 let wallMessage = 'The Wall'
 
 app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
-server.listen(3000);
+server.listen(port);
 
 io.on('connection', function (socket) {
   socket.emit('server-message', { message: wallMessage });
