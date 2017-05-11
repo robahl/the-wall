@@ -21,8 +21,10 @@ body {
   left: 50%;
   font-size: 5em;
   max-width: 95%;
+  max-height: 75%;
   min-width: 1em;
   transform: translateY(-50%) translateX(-50%);
+  overflow-y: auto;
   outline: none;
 }
 
